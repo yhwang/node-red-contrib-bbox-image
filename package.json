@@ -1,0 +1,40 @@
+{
+  "name": "node-red-contrib-bbox-image",
+  "version": "0.1.0",
+  "description": "A custom Node-RED node to annotate the image with Object Detection bounding box",
+  "main": "dist/index/js",
+  "scripts": {
+    "build": "tsc && npm run copy",
+    "lint": "tslint -p tsconfig.json -c tslint.json src/**/*.ts",
+    "copy": "node scripts/copy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhwang/node-red-contrib-bbox-image.git"
+  },
+  "keywords": [
+    "Object-Detection",
+    "bounding-box",
+    "Node-RED"
+  ],
+  "node-red": {
+    "nodes": {
+      "bbox-image": "dist/index.js"
+    }
+  },
+  "author": "yh.wang@ibm.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/yhwang/node-red-contrib-bbox-image/issues"
+  },
+  "homepage": "https://github.com/yhwang/node-red-contrib-bbox-image#readme",
+  "devDependencies": {
+    "@types/node": "^12.12.17",
+    "shelljs": "^0.8.3",
+    "tslint": "^5.20.1",
+    "typescript": "3.5.3"
+  },
+  "dependencies": {
+    "canvas": "^2.6.1"
+  }
+}
